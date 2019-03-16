@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, cleanup } from 'react-testing-library'
 import App from 'components/App'
 
 afterEach(cleanup)

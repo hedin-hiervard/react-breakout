@@ -1,11 +1,10 @@
 import HtmlPlugin from 'html-webpack-plugin'
 import path from 'path'
-import webpack from 'webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const htmlPlugin = new HtmlPlugin({
     template: path.resolve(__dirname, 'index.html'),
-    filename: 'index.html'
+    filename: 'index.html',
 })
 
 const copyPlugin = new CopyWebpackPlugin([
@@ -51,7 +50,7 @@ const config = {
                         },
                     },
                 ],
-            }
+            },
         ],
     },
     plugins: [

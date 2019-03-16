@@ -9,16 +9,24 @@
   ],
   "parser": "babel-eslint",
   "extends": [
-    "standard",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "plugin:react/recommended"
   ],
   "env": {
     "jest": "true"
   },
+  "settings": {
+    "react": {
+      "createClass": "createReactClass",
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "detect"
+    }
+  },
   "rules": {
     "semi": [
-        "error",
-        "never"
+      "error",
+      "never"
     ],
     "no-extra-semi": 1,
     "indent": [
