@@ -6,11 +6,11 @@ import App from 'components/App'
 import { AppContainer } from 'react-hot-loader'
 import VError from 'verror'
 
-declare var module: {
-    hot: {
-        accept: (string, () => any) => void,
-    }
-};
+// declare var module: {
+//     hot: {
+//         accept: (string, () => any) => void,
+//     }
+// };
 
 const fullRender = Component => {
     const index: ?HTMLElement = document.querySelector('#index')

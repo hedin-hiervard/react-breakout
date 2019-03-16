@@ -1,6 +1,6 @@
-import HtmlPlugin from 'html-webpack-plugin'
-import path from 'path'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
+const HtmlPlugin = require('html-webpack-plugin')
+const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const htmlPlugin = new HtmlPlugin({
     template: path.resolve(__dirname, 'index.html'),
@@ -21,15 +21,6 @@ const config = {
         filename: 'bundled.js',
         publicPath: '/',
     },
-    node: {
-        fs: 'empty',
-        module: 'empty',
-    },
-
-    devServer: {
-        historyApiFallback: true,
-    },
-
     module: {
         rules: [
             {
@@ -37,6 +28,9 @@ const config = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
+                    options: {
+                        babelrc: true,
+                    },
                 },
             },
             {

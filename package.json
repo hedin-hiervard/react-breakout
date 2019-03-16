@@ -8,14 +8,17 @@
     "unit-test": "jest",
     "lint": "yarn eslint src test",
     "test": "yarn unit-test && yarn lint && flow",
-    "precommit": "yarn test"
+    "precommit": "yarn test",
+    "start": "webpack-dev-server --config=src/webpack.config.js --open --mode development"
   },
   "dependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-transform-flow-strip-types": "^7.3.4",
     "@babel/preset-env": "7.3.4",
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
     "babel-eslint": "8.2.2",
+    "babel-loader": "^8.0.5",
     "babel-plugin-module-resolver": "3.2.0",
     "chai": "4.1.2",
     "chai-string": "1.4.0",
@@ -58,6 +61,7 @@
     "jest-resolve": "^24.5.0",
     "react-test-renderer": "16.8.4",
     "react-testing-library": "6.0.0",
+    "webpack-cli": "^3.3.0",
     "webpack-dev-server": "3.1.5"
   }
 }
