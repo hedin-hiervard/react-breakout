@@ -33,6 +33,7 @@
       "error",
       4
     ],
+    "react/prop-types": 0,
     "space-before-function-paren": 0,
     "keyword-spacing": 0,
     "no-console": 2,

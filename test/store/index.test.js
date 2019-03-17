@@ -8,5 +8,8 @@ test('creates proper store', async () => {
     expect(store).toHaveProperty('subscribe')
 
     const state = store.getState()
-    expect(state).toHaveProperty('pause', { paused: false })
+    expect(state).toHaveProperty('field')
+    expect(state).toHaveProperty('bricks')
+    expect(state).toHaveProperty('paddle')
+    expect(state).toHaveProperty('ball')
 })

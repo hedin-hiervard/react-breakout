@@ -2,14 +2,19 @@
 
 import React from 'react'
 import { render, cleanup } from 'react-testing-library'
-import App from 'components/App'
+import { App, Paddle, Field } from 'components/App'
 
 afterEach(cleanup)
 
-test('app renders single div', async () => {
-    const { getByText } = render(
-        <App/>,
+test('field is a div with fixed size', async () => {
+    const field = render(
+        <Field width={ 500 } height ={ 500 }/>,
     )
 
-    expect(getByText('Hello, world!')).toBeTruthy()
+    const div = field.baseElement.firstChild.firstChild
+    expect(div.style.getPropertyValue('width')).toEqual('500px')
+    expect(div.style.getPropertyValue('height')).toEqual('500px')
+    expect(div.style.getPropertyValue('left')).toEqual('0px')
+    expect(div.style.getPropertyValue('top')).toEqual('0px')
 })
+
